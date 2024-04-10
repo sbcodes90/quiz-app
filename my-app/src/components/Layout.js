@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 function Layout() {
   return (
-    <div className='bg-teal-500 min-h-[20vh]'>
+    <div>
     <main>
         <Outlet />
     </main>

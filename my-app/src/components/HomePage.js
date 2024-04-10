@@ -12,7 +12,7 @@ export default function HomePage() {
 
       </div>
       <div className='flex-row text-center relative'>
-      <button className='text-2xl text-white font-black bg-teal-400 px-10 py-2 rounded-3xl'><Link to="quiz">Enter</Link></button>
+      <button className='text-2xl text-white font-black bg-teal-400 px-10 py-2 rounded-3xl animate-bounce animate-infinite'><Link to="options">Enter</Link></button>
       </div>
       </div>
  

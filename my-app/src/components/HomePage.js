@@ -9,7 +9,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   return (
     <>
-    <div className=" bg-gradient-to-r from-purple-950 to-purple-800 h-auto">
+    <div className=" bg-gradient-to-r from-purple-950 to-purple-800 h-screen">
       <div className=' flex items-center justify-center'>
       <img src={bebelogo} alt='logo' className='w-[700px] h-auto pt-10' />
 

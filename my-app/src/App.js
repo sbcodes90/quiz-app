@@ -1,6 +1,7 @@
 //pages
 import HomePage from "./components/HomePage";
 import OptionsPage from "./components/OptionsPage";
+import JsQuiz from "./components/JsQuiz";
 
 //layout
 import Layout from "./components/Layout";
@@ -11,6 +12,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
       <Route index element={<HomePage />} />
       <Route path='options' element={<OptionsPage />} />
+      <Route path='options/js' element={<JsQuiz />} />
+
+
     </Route>
   )
 )

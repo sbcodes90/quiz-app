@@ -12,18 +12,15 @@ export default function JsQuiz() {
       {/* <div className='flex flex-col-1 lg:col-2 items-center justify-around gap-5 pt-20'> */}
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center px-10 py-10">
         <div className="lg:w-[500px]">
-          <img src={bebe} alt="bebe" />
+        <img src={treat} alt="dog-treat" />
         </div>
         <div className="bg-white lg:w-[500px] lg:h-[400px] rounded-2xl p-10 shadow-2xl">
-          Uh-oh!! Bebe is hungry , feed her a treat//code to do so this is the
-          code to feed her on click //if correct feed her animation on
-          click//lets explain the drag and drop feature{" "}
-       
+        <div className="font-bold text-black text-center">Uh oh! Bebe is hungry!</div>
+        <div className="text-center text-purple-800 font-bold mt-2">Which code will feed her a snack?</div>
         </div>
-        <img src={treat} alt="dog-treat" />
-        <button className="mt-10 py-5 rounded-3xl mb-20 bg-yellow-400 font-extrabold">
+     {/*    <button className="mt-10 py-5 rounded-3xl mb-20 bg-yellow-400 font-extrabold">
           Lets Play
-        </button>
+        </button> */}
       </div>
     </div>
   );

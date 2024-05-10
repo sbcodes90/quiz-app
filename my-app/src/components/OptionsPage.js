@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function OptionsPage() {
 
   const navigate = useNavigate()
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    return setHover(true);
+  };
 
   return (
     <div className='bg-gradient-to-r from-purple-950 to-purple-800 h-screen'>
@@ -12,8 +17,11 @@ export default function OptionsPage() {
         <div className='text-2xl font-bold mb-10 text-yellow-400'>Choose a coding language</div>
          <div className='flex flex-col col-3 gap-5'>
          <button onClick={()=> navigate('js')} className='bg-teal-400 rounded-xl py-5 px-20 font-bold hover:bg-yellow-400'>Javascript</button>
-         <button className='bg-teal-400 rounded-xl py-5 px-20 font-bold hover:bg-yellow-400'>HTML</button>
-         <button className='bg-teal-400 rounded-xl py-5 px-20 font-bold hover:bg-yellow-400'>CSS</button>
+         <button onFocus={() => setHover(true)} onMouseEnter={()=> setHover(true)}
+         className='bg-gray-400  rounded-xl py-5 px-20 font-bold hover:cursor-not-allowed	'>
+          HTML Coming Soon...</button>
+          
+         <button   className='bg-gray-400 rounded-xl py-5 px-20 font-bold  hover:cursor-not-allowed'>CSS Coming soon...</button>
          </div>
         </div>
       </div>

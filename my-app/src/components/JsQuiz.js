@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import dog from "../images/dog.png";
 import { questions } from "../utils/data.js";
+import { Link } from "react-router-dom";
+
 export default function JsQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -24,8 +26,8 @@ export default function JsQuiz() {
   const tryAgain = () => {
     setShowScore(false);
     setScore(0);
-    setCurrentQuestion(0); 
-  }
+    setCurrentQuestion(0);
+  };
 
   return (
     <>
@@ -35,9 +37,9 @@ export default function JsQuiz() {
         </header>
         <div className="grid lg:grid-cols-2">
           <div>
-            <img src={dog} alt="dog"/>
+            <img src={dog} alt="dog" />
           </div>
-         
+
           {!showScore ? (
             <div className="grid-cols-2 mx-20 mb-10 lg:mr-20 lg:mt-[150px]">
               <div className="bg-white rounded-3xl p-5 font-black">
@@ -57,11 +59,29 @@ export default function JsQuiz() {
             </div>
           ) : (
             <div className="text-white font-black text-2xl text-center lg:mt-[120px] lg:mr-10 lg:mb-40 rounded-3xl pt-[100px]">
-              { score === 4 && <div>Hooray! You did it! You scored 100%!</div>}
+              {score === 4 && (
+                <>
+                  <div className="mb-10">Congrats Friend! You did it! You scored 100%!</div>
+                  <Link
+                    to="/options"
+                    className="px-10 py-5 bg-teal-400 rounded-3xl text-sm text-black hover:bg-yellow-500"
+                  >
+                    Learn a different language
+                  </Link>
+                </>
+              )}
               <br></br>
-             { score <=3 && <><div>Whoops! Friend, I think you need more practice...</div> <button className="px-10 py-5 bg-orange-400 rounded-3xl mt-10 text-sm text-black" onClick={tryAgain}>
-                Try Again
-              </button></> }
+              {score <= 3 && (
+                <>
+                  <div>Whoops! Friend, I think you need more practice...</div>{" "}
+                  <button
+                    className="px-10 py-5 bg-orange-400 rounded-3xl mt-10 text-sm text-black"
+                    onClick={tryAgain}
+                  >
+                    Try Again
+                  </button>
+                </>
+              )}
             </div>
           )}
         </div>

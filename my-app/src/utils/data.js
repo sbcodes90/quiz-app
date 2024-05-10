@@ -1,11 +1,11 @@
 export const questions = [
     {
-        questionText: 'What is the capital of France?',
+        questionText: `Uh-Oh! BeBe is hungry! Which array method will add a treat to Bebe's array of snacks?`,
         answerOptions: [
-            { answerText: 'New York', isCorrect: false },
-            { answerText: 'London', isCorrect: false },
-            { answerText: 'Paris', isCorrect: true },
-            { answerText: 'Dublin', isCorrect: false },
+            { answerText: 'array.push()', isCorrect: true },
+            { answerText: 'array.shift()', isCorrect: false },
+            { answerText: 'array.reverse()', isCorrect: false },
+            { answerText: 'array.pop()', isCorrect: false },
         ],
     },
     {
